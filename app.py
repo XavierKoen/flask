@@ -16,3 +16,8 @@ if __name__ == '__main__':
 @app.route('/greet/<name>')
 def greet(name=""):
     return "Hello {}".format(name)
+
+
+def convert_celsius_to_fahrenheit(celsius):
+    fahrenheit = celsius * 9.0 / 5 + 32
+    return fahrenheit
