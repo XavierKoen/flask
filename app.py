@@ -18,6 +18,7 @@ def greet(name=""):
     return "Hello {}".format(name)
 
 
-def convert_celsius_to_fahrenheit(celsius):
-    fahrenheit = celsius * 9.0 / 5 + 32
-    return fahrenheit
+@app.route('/f/<celsius_value>')
+def convert_celsius_to_fahrenheit(celsius_value=''):
+    fahrenheit_value = float(celsius_value) * 9.0 / 5 + 32
+    return str(fahrenheit_value)
