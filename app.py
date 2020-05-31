@@ -21,4 +21,4 @@ def greet(name=""):
 @app.route('/f/<celsius_value>')
 def convert_celsius_to_fahrenheit(celsius_value=''):
     fahrenheit_value = float(celsius_value) * 9.0 / 5 + 32
-    return str(fahrenheit_value)
+    return "{}°C converted to fahrenheit would equal: {}°F".format(celsius_value, fahrenheit_value)
